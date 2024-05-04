@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     InputAction jumpAction;
     InputAction sprintAction;
 
+    static public bool dialogue = false;
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -35,7 +37,18 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!dialogue)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        
     }
 
     public void Teleport(Vector3 position, Quaternion rotation)
@@ -49,9 +62,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        UpdateGravity();
-        UpdateMovement();
-        UpdateLook();
+        if (!dialogue)
+        {
+            UpdateGravity();
+            UpdateMovement();
+            UpdateLook();
+        }
     }
 
     void UpdateGravity()
