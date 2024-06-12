@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +21,8 @@ public class Player : MonoBehaviour
     InputAction sprintAction;
 
     static public bool dialogue = false;
+
+    public bool isSitting = false;
 
     void Awake()
     {
@@ -66,7 +65,7 @@ public class Player : MonoBehaviour
         {
             UpdateGravity();
             UpdateMovement();
-            UpdateLook();
+            if (!isSitting) UpdateLook();
         }
     }
 
@@ -99,10 +98,7 @@ public class Player : MonoBehaviour
         velocity.z = Mathf.Lerp(velocity.z, input.z, factor);
 
         var jumpInput = jumpAction.ReadValue<float>();
-        if (jumpInput > 0 && controller.isGrounded)
-        {
-            velocity.y += jumpSpeed;
-        }
+        if (jumpInput > 0 && controller.isGrounded) velocity.y += jumpSpeed;
         
         controller.Move(velocity * Time.deltaTime);
     }
@@ -116,6 +112,6 @@ public class Player : MonoBehaviour
         look.y = Mathf.Clamp(look.y, -89f, 89f);
 
         cameraTransform.localRotation = Quaternion.Euler(-look.y, 0, 0);
-        transform.localRotation = Quaternion.Euler(0, look.x, 0);
+        transform.localRotation = Quaternion.Euler(0,look.x, 0);
     }
 }

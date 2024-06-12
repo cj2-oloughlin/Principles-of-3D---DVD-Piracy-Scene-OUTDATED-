@@ -1,39 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SitInChair : MonoBehaviour
 {
 
-    public GameObject chair;
-    public Vector3 sitOffset = new Vector3(0f, 0.5f, 0f);
-    private bool isSitting = false;
+    [SerializeField] private GameObject screen;
+    [SerializeField] private Player player;
+    [SerializeField] private Transform playerCamera;
+
+    [SerializeField] private Vector3 sittingPosition = new Vector3(0f, 0.5f, 0f);
+    [SerializeField] private Quaternion sittingRotation;
+    [SerializeField] private Vector3 sittingScale = new Vector3(0f, 0.5f, 0f);
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !isSitting)
-        {
-            Sit();
-        }
-        else if (Input.GetKeyDown(KeyCode.F) && isSitting)
-        {
-            Stand();
-        }
+        if (Input.GetKeyDown(KeyCode.F) && !player.isSitting) Sit();
+        else if (Input.GetKeyDown(KeyCode.F) && player.isSitting) Stand();
     }
 
     void Sit()
     {
-        if (chair != null)
-        {
-            transform.position = chair.transform.position + sitOffset;
-            transform.parent = chair.transform;
-            isSitting = true;
-        }
+        player.transform.parent = transform;
+        player.transform.localPosition = sittingPosition;
+        player.transform.localRotation = sittingRotation;
+        player.transform.localScale = sittingScale;
+        playerCamera.LookAt(screen.transform);
+        player.isSitting = true;
     }
 
     void Stand()
     {
-        transform.parent = null;
-        isSitting = false;
+        player.transform.parent = null;
+        player.isSitting = false;
     }
 }
