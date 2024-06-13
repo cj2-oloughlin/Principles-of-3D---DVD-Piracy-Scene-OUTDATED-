@@ -3718,6 +3718,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100048, guid: 438ef91a5f9e61c45941464eebc462dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1505788027}
+    - targetCorrespondingSourceObject: {fileID: 100048, guid: 438ef91a5f9e61c45941464eebc462dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1505788029}
   m_SourcePrefab: {fileID: 100100000, guid: 438ef91a5f9e61c45941464eebc462dd, type: 3}
 --- !u!1 &282472292
 GameObject:
@@ -4365,6 +4368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d_template: {fileID: 0}
   canva: {fileID: 0}
+  player_detection: 0
 --- !u!135 &324574596
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5232,6 +5236,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100048, guid: ec65e91f0d37ac74a89bcd7fa3354177, type: 3}
       insertIndex: -1
       addedObject: {fileID: 709369020}
+    - targetCorrespondingSourceObject: {fileID: 100048, guid: ec65e91f0d37ac74a89bcd7fa3354177, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 709369022}
   m_SourcePrefab: {fileID: 100100000, guid: ec65e91f0d37ac74a89bcd7fa3354177, type: 3}
 --- !u!1001 &373229343
 PrefabInstance:
@@ -5531,6 +5538,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100048, guid: 1d549942b3bfb7f43a1977dd6aa83a3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1482441232}
+    - targetCorrespondingSourceObject: {fileID: 100048, guid: 1d549942b3bfb7f43a1977dd6aa83a3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1482441234}
   m_SourcePrefab: {fileID: 100100000, guid: 1d549942b3bfb7f43a1977dd6aa83a3d, type: 3}
 --- !u!1001 &386124982
 PrefabInstance:
@@ -6403,6 +6413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d_template: {fileID: 0}
   canva: {fileID: 0}
+  player_detection: 0
 --- !u!135 &441579627
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9662,6 +9673,18 @@ CapsuleCollider:
   m_Height: 2.9670413
   m_Direction: 1
   m_Center: {x: 0, y: 0.98351914, z: 0}
+--- !u!114 &709369022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709369018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e9206a892765544989b84fba41be78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &715843801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17708,9 +17731,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2654661558636315405, guid: dc90d554ef4c11844b2ac15acc133098, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1552928334}
-    - targetCorrespondingSourceObject: {fileID: 2654661558636315405, guid: dc90d554ef4c11844b2ac15acc133098, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1552928337}
   m_SourcePrefab: {fileID: 100100000, guid: dc90d554ef4c11844b2ac15acc133098, type: 3}
 --- !u!1 &1222468086
 GameObject:
@@ -18130,6 +18150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d_template: {fileID: 0}
   canva: {fileID: 0}
+  player_detection: 0
 --- !u!135 &1233244061
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21225,6 +21246,18 @@ CapsuleCollider:
   m_Height: 3.1426077
   m_Direction: 1
   m_Center: {x: 0, y: 1.0713013, z: 0}
+--- !u!114 &1482441234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473339587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e9206a892765544989b84fba41be78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1482565179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 753865965074803063, guid: a5335bdcb66c0bf48b598c242cc41a42, type: 3}
@@ -21452,6 +21485,18 @@ CapsuleCollider:
   m_Height: 3.1747942
   m_Direction: 1
   m_Center: {x: 0, y: 1.0419431, z: -0}
+--- !u!114 &1505788029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583728019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e9206a892765544989b84fba41be78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1508111649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21848,22 +21893,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1334353993652321953, guid: 3d55057796203024ca0deaad7fd6a70c, type: 3}
---- !u!114 &1552928337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319965574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a99ac79b66e484f8813d785cc1d473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 5410974633553944853, guid: 1fa1df7a5c5c9e44cbe353cb895f69ad, type: 3}
-  scale: {x: 2, y: 2, z: 2}
-  spawnOffset: {x: 1.5, y: 0, z: 0}
-  colliderSize: {x: 1, y: 1, z: 1}
 --- !u!1001 &1555003267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21936,6 +21965,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23187763769529026, guid: 67cebe2061e51504a861c1008815220b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9158e532cf75ef240ade6363141205a8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22905,6 +22938,7 @@ GameObject:
   - component: {fileID: 1596650959}
   - component: {fileID: 1596650961}
   - component: {fileID: 1596650962}
+  - component: {fileID: 1596650963}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -23004,6 +23038,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1596650963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596650958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0988057c656ee874db1da73ab0910ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1604566427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23349,6 +23395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d_template: {fileID: 0}
   canva: {fileID: 0}
+  player_detection: 0
 --- !u!135 &1647595681
 SphereCollider:
   m_ObjectHideFlags: 0
