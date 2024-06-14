@@ -6,6 +6,7 @@ using UnityEngine;
 public class NPCInteractable : MonoBehaviour
 {
     [SerializeField] private string interactText;
+    [SerializeField] private Dialogue dialogue;
 
     private Animator animator;
 
@@ -19,6 +20,7 @@ public class NPCInteractable : MonoBehaviour
         Debug.Log("Interact!");
 
         animator.SetTrigger("Talk");
+        dialogue.Talk();
     }
 
     public string GetInteractText()
