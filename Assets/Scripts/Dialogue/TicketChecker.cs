@@ -6,6 +6,7 @@ using UnityEngine;
 public class TicketChecker : Dialogue
 {
     [SerializeField] private DialogManager DialogManager;
+    [SerializeField] private Animator animator;
 
     public override void Talk()
     {
@@ -14,10 +15,15 @@ public class TicketChecker : Dialogue
             return;
         }
 
-        var dialogTexts = new List<DialogData>();
+        animator.SetBool("Talk", true);
 
-        dialogTexts.Add(new DialogData("Hi./wait:0.5//close/", "Ticket Checker", isSkipable: false));
+        var dialogData = new List<DialogData>();
 
-        DialogManager.Show(dialogTexts);
+        dialogData.Add(new DialogData("Hi./wait:0.5//close/", "Ticket Checker", isSkipable: false));
+
+
+        dialogData.Add(new DialogData("Hi./wait:0.5//close/", "Ticket Checker", () => animator.SetBool("Talk", false), isSkipable: false));
+
+        DialogManager.Show(dialogData);
     }
 }

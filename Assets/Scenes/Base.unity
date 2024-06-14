@@ -9855,6 +9855,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Talk with Cashier
   dialogue: {fileID: 1763939902}
+--- !u!95 &709369023 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: ec65e91f0d37ac74a89bcd7fa3354177, type: 3}
+  m_PrefabInstance: {fileID: 370948231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &715843801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17036,6 +17041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 598372768}
+  animator: {fileID: 1482441235}
 --- !u!4 &1156782377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4977606193089320, guid: 562a9bea7220eb845b5c0856fc5a9e6e, type: 3}
@@ -17816,6 +17822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 598372768}
+  animator: {fileID: 1505788030}
 --- !u!1001 &1190788398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21551,6 +21558,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Talk with Receptionist
   dialogue: {fileID: 1154009630}
+--- !u!95 &1482441235 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 1d549942b3bfb7f43a1977dd6aa83a3d, type: 3}
+  m_PrefabInstance: {fileID: 379581046}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1482565179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 753865965074803063, guid: a5335bdcb66c0bf48b598c242cc41a42, type: 3}
@@ -21792,6 +21804,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Talk with Ticket Checker
   dialogue: {fileID: 1187576068}
+--- !u!95 &1505788030 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 438ef91a5f9e61c45941464eebc462dd, type: 3}
+  m_PrefabInstance: {fileID: 279254325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1508111649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24947,6 +24964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 598372768}
+  animator: {fileID: 709369023}
 --- !u!1001 &1764925775
 PrefabInstance:
   m_ObjectHideFlags: 0
