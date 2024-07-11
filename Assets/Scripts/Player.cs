@@ -60,12 +60,13 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    {  
         if (!dialogue)
         {
             UpdateGravity();
             UpdateMovement();
             if (!isSitting) UpdateLook();
+            
         }
     }
 
